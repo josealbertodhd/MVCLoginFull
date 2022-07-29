@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="views/acta/css/styleActa.css">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <title>Acta</title>
+</head>
+
+<body>
+    <div class="main_acta">
+        <div class="titulo_main">
+            <h2>Registro de Actas</h2>
+            <a href="routes.php?controller=Acta&action=mostrar"><i class="fas fa-eye"></i></a>
+        </div>
+        <form action="routes.php?controller=Acta&action=registrar" method="post">
+            <select name="programa" id="programa">
+                <option value="0">Programa</option>
+                <option value="1">Ingenieria de Sistemas</option>
+                <option value="2">Ingenieria Industrial</option>
+                <option value="3">Ingenieria de Alimentos</option>
+                <option value="4">Ingenieria Agronomica</option>
+                <option value="5">Ingenieria Ambiental</option>
+            </select>
+            <input type="text" name="asunto" placeholder="Asunto" id="asunto">
+            <input type="date" name="fecha_acta" id="fecha_acta" placeholder="Fecha">
+            <textarea id="descripcion_acta" name="descripcion_acta" rows="4" cols="40" placeholder="Descripcion"></textarea>
+            <input type="text" name="responsable_acta" id="responsable_acta" placeholder="Responsable">
+            <input type="submit" value="Registrar Acta">
+        </form>
+    </div>
+</body>
+
+</html>
